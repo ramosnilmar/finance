@@ -27,18 +27,17 @@ export default function Sidebar() {
   return (
     <div
       data-active={isOpen}
-      className="relative h-screen data-[active=true]:w-[92px] w-[230px] bg-white text-gray-600 py-8 px-7 transition-all duration-300 ease-in-out"
-      onClick={toggle}
+      className="relative h-screen data-[active=true]:w-[80px] w-[240px] bg-white text-gray-600 transition-all duration-300 ease-in-out"
     >
-      <div className="overflow-hidden flex flex-col gap-12">
-        <div className={S.chevron}>
+      <div className="overflow-hidden flex flex-col">
+        <div className={S.chevron} onClick={toggle}>
           {!isOpen ? (
             <ChevronLeftIcon className="h-4 w-4" />
           ) : (
             <ChevronRightIcon className="h-4 w-4" />
           )}
         </div>
-        <ChartBarIcon className="h-10 w-10 text-sky-600" />
+        <ChartBarIcon className="h-10 w-10 text-sky-600 m-6" />
 
         <div className={S.iconWrapper}>
           <HomeIcon className="h-7 w-7" />
