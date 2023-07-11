@@ -1,0 +1,11 @@
+.iconWrapper {
+  @apply flex items-center gap-4 w-[230px] cursor-pointer;
+}
+
+.chevron {
+  @apply absolute flex items-center justify-center bg-white shadow-md shadow-indigo-500/40 p-1 rounded-full;
+  z-index: 99;
+  top: 72px;
+  right: -12px; 
+  cursor: pointer;
+}
