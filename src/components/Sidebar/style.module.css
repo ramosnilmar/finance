@@ -1,6 +1,8 @@
 .iconWrapper {
-  @apply flex items-center gap-4 w-[230px] cursor-pointer;
+  @apply flex items-center gap-8 w-[240px] h-full cursor-pointer hover:bg-gray-100;
+  padding: 24px 0 24px 24px;
 }
+
 
 .chevron {
   @apply absolute flex items-center justify-center bg-white shadow-md shadow-indigo-500/40 p-1 rounded-full;
