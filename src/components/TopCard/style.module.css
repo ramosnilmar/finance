@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 340px;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.cardHeader { 
+  padding-bottom: 8px;
+}
+
+.cardValue {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
