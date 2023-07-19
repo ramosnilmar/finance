@@ -31,7 +31,11 @@ export default function Home() {
             action={{ title: "Ver mais", link: "/despesas" }}
           >
             <div className="h-96 flex justify-center items-center">
-              <Chart options={options} series={[44, 55]} type="donut" />
+              <Chart
+                options={options}
+                series={[70, 91, 125, 80]}
+                type="donut"
+              />
             </div>
           </Card>
           <Card
@@ -39,7 +43,7 @@ export default function Home() {
             action={{ title: "Ver mais", link: "/receitas" }}
           >
             <div className="h-96 flex justify-center items-center">
-              <Chart options={options} series={[70, 91, 125]} type="donut" />
+              <Chart options={options} series={[4600]} type="donut" />
             </div>
           </Card>
         </div>
