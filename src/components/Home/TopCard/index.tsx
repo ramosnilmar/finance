@@ -37,7 +37,7 @@ const cards = [
   },
 ];
 
-export default function Card() {
+export default function TopCard() {
   return (
     <div className="flex gap-4">
       {cards.map((card) => (
