@@ -30,7 +30,7 @@ export default function Home() {
             title="Despesas por categoria"
             action={{ title: "Ver mais", link: "/despesas" }}
           >
-            <div className="h-96 flex justify-center items-center">
+            <div className="h-72 flex justify-center items-center">
               <Chart
                 options={options}
                 series={[70, 91, 125, 80]}
@@ -42,7 +42,7 @@ export default function Home() {
             title="Receitas por categoria"
             action={{ title: "Ver mais", link: "/receitas" }}
           >
-            <div className="h-96 flex justify-center items-center">
+            <div className="h-72 flex justify-center items-center">
               <Chart options={options} series={[4600]} type="donut" />
             </div>
           </Card>
