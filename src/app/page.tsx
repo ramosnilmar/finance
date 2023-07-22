@@ -15,7 +15,6 @@ export default function Home() {
         </div>
         <div className="flex gap-6">
           <BalacoMensal />
-          <BalacoMensal />
         </div>
       </div>
     </main>
