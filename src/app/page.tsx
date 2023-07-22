@@ -1,7 +1,6 @@
 "use client";
 import Sidebar from "@/components/Sidebar";
 import TopCard from "@/components/Home/TopCard";
-import dynamic from "next/dynamic";
 import BalacoMensal from "@/components/Home/BalancoMensal";
 import Chart from "@/components/Home/Chart";
 
