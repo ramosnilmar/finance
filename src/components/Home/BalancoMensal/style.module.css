@@ -1,0 +1,22 @@
+.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+.title p:first-child {
+  padding-bottom: 12px;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: 500;
+    color: #F44336;
+}
+.value p:first-child {
+  color: #4CAF50;
+  padding-bottom: 12px;
+}
+
+.b_value {
+    font-size: 18px;
+    font-weight: 500;
+}

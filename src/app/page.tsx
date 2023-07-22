@@ -1,9 +1,10 @@
 "use client";
 import Card from "@/components/Card";
 import Sidebar from "@/components/Sidebar";
-import TopCard from "@/components/TopCard";
+import TopCard from "@/components/Home/TopCard";
 import dynamic from "next/dynamic";
 import type { ApexOptions } from "apexcharts";
+import BalacoMensal from "@/components/Home/BalancoMensal";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
@@ -23,7 +24,7 @@ export default function Home() {
   return (
     <main className="flex gap-16">
       <Sidebar />
-      <div>
+      <div className="mb-16">
         <TopCard />
         <div className="flex gap-6">
           <Card
@@ -46,6 +47,10 @@ export default function Home() {
               <Chart options={options} series={[4600]} type="donut" />
             </div>
           </Card>
+        </div>
+        <div className="flex gap-6">
+          <BalacoMensal />
+          <BalacoMensal />
         </div>
       </div>
     </main>
