@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar";
 import TopCard from "@/components/Home/TopCard";
 import MonthlyBalance from "@/components/Home/MonthlyBalance";
 import Chart from "@/components/Home/Chart";
-import CredCard from "@/components/Home/CredCard";
+import CredCard from "@/components/Home/CreditCard";
 
 export default function Home() {
   return (
