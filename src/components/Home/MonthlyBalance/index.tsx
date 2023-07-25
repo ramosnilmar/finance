@@ -3,19 +3,19 @@ import S from "./style.module.css";
 import { formatPrice } from "@/utils/formatPrice";
 
 const values = {
-  receitas: 4600,
-  despesas: 1241 + 91 + 125 + 80,
-  balanco: 4600 - (1241 + 91 + 125 + 80),
+  incomes: 4600,
+  expenses: 1241 + 91 + 125 + 80,
+  balance: 4600 - (1241 + 91 + 125 + 80),
 };
 
-export default function BalacoMensal() {
-  const { receitas, despesas, balanco } = values;
-  const progressValue = (despesas / receitas) * 100;
+export default function MonthlyBalance() {
+  const { incomes, expenses, balance } = values;
+  const progressValue = (expenses / incomes) * 100;
 
   return (
     <Card
       title="Balanço Mensal"
-      action={{ title: "Ver mais", link: "/relatorios" }}
+      action={{ title: "Ver mais", link: "/reports" }}
     >
       <div className="flex gap-6 px-8 py-6">
         <div className="flex gap-4">
@@ -35,8 +35,8 @@ export default function BalacoMensal() {
               <p>Despesas</p>
             </div>
             <div className={S.value}>
-              <p>{formatPrice(receitas)}</p>
-              <p>{formatPrice(despesas)}</p>
+              <p>{formatPrice(incomes)}</p>
+              <p>{formatPrice(expenses)}</p>
             </div>
           </div>
           <div className="flex justify-between pt-4 border-t-2">
@@ -44,7 +44,7 @@ export default function BalacoMensal() {
               <p>Balanço</p>
             </div>
             <div className={S.b_value}>
-              <p>{formatPrice(balanco)}</p>
+              <p>{formatPrice(balance)}</p>
             </div>
           </div>
         </div>
