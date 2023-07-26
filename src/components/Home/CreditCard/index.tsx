@@ -2,6 +2,15 @@ import Card from "@/components/Card";
 import S from "./style.module.css";
 import { formatPrice } from "@/utils/formatPrice";
 
+type TCreditCard = {
+  id: number;
+  name: string;
+  invoice: number;
+  limit: number;
+  color: string;
+  colseData: string;
+};
+
 const creditCards = [
   {
     id: 1,
@@ -14,7 +23,7 @@ const creditCards = [
   {
     id: 2,
     name: "Itaú",
-    invoice: 2500,
+    invoice: 6900,
     limit: 8000,
     color: "#ffaf11",
     colseData: "10/12/2023",
@@ -22,6 +31,11 @@ const creditCards = [
 ];
 
 export default function CreditCard() {
+  const total = creditCards.reduce((acc, card) => acc + card.invoice, 0);
+  const percentLimit = (card: TCreditCard) => {
+    return `${(card.invoice / card.limit) * 100}%`;
+  };
+
   return (
     <Card
       title="Cartão de Crédito"
@@ -34,20 +48,24 @@ export default function CreditCard() {
               className={S.logoCard}
               style={{ background: card.color }}
             ></div>
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <div className={S.title}>
                 {card.name} - <span>{card.colseData}</span>
               </div>
               <div className={S.value}>{formatPrice(card.invoice)}</div>
               <div className={S.progressWrapper}>
-                <div className={S.proggress}></div>
+                <div
+                  style={{ width: percentLimit(card) }}
+                  className={S.progress}
+                ></div>
+                <div className={S.percents}>{percentLimit(card)}</div>
               </div>
             </div>
           </div>
         ))}
         <div className="flex justify-between px-6">
           <span>TOTAL</span>
-          <span>1800</span>
+          <span>{formatPrice(total)}</span>
         </div>
       </div>
     </Card>
