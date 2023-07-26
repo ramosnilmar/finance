@@ -21,7 +21,7 @@ export default function Chart() {
     <>
       <Card
         title="Despesas por categoria"
-        action={{ title: "Ver mais", link: "/despesas" }}
+        action={{ title: "Ver mais", link: "/expenses" }}
       >
         <div className="h-72 flex justify-center items-center">
           <ApexChart
@@ -33,7 +33,7 @@ export default function Chart() {
       </Card>
       <Card
         title="Receitas por categoria"
-        action={{ title: "Ver mais", link: "/receitas" }}
+        action={{ title: "Ver mais", link: "/incomes" }}
       >
         <div className="h-72 flex justify-center items-center">
           <ApexChart options={options} series={[4600]} type="donut" />
